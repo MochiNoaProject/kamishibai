@@ -39,7 +39,7 @@
         // Cache用のディレクトリやファイル
         "**/.cache": true,
         // Buildディレクトリやファイル
-        //"**/dist": true,
+        "**/dist": true,
         "**/build": true
     },
     "files.watcherExclude": {
