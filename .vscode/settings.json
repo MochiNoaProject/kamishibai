@@ -39,8 +39,8 @@
         // Cache用のディレクトリやファイル
         "**/.cache": true,
         // Buildディレクトリやファイル
-        "**/dist": true,
-        "**/build": true
+        //"**/dist": true,
+        //"**/build": true
     },
     "files.watcherExclude": {
         // Default Settings

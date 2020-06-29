@@ -10,3 +10,9 @@ ReactDOM.render(<App />, document.getElementById('root'));
 if (import.meta.hot) {
   import.meta.hot.accept();
 }
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', async () => {
+    await navigator.serviceWorker.register('./sw.js');
+  });
+}

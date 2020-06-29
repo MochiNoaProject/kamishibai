@@ -4,11 +4,13 @@
   "license": "MIT",
   "scripts": {
     "start": "snowpack dev",
-    "build": "snowpack build",
+    "build": "snowpack build && yarn pwa",
     "test": "jest",
     "format": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
     "format:json": "yarn lint:json --write",
-    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\""
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+    "init:pwa": "workbox wizard",
+    "pwa":"workbox generateSW workbox-config.js"
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
@@ -34,7 +36,8 @@
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.0",
     "snowpack": "^2.5.0",
-    "typescript": "^3.8.0"
+    "typescript": "^3.8.0",
+    "workbox-cli": "^5.1.3"
   },
   "husky": {
     "hooks": {
