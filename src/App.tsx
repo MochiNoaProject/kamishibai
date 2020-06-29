@@ -53,19 +53,68 @@ const App: React.FC = () => {
     };
   }, []);
 
+  const [backgroundColor, setBackgroundColor] = useState('#00FF00');
+  const [counterBackgroundColor, setCounterBackgroundColor] = useState(
+    '#ffffff',
+  );
+  const [color, setColor] = useState('#000000');
+
   return (
-    <div>
+    <div
+      style={{ backgroundColor, color }}
+      css={css`
+        min-height: 100vh;
+        padding-top: 50px;
+      `}
+    >
+      <p
+        style={{ backgroundColor: counterBackgroundColor }}
+        css={css`
+          font-size: 4vw;
+          width: fit-content;
+          padding: 0px 1ch;
+        `}
+      >
+        {index + 1}個目
+      </p>
       {images.length === 0 ? (
-        <button onClick={handleClick}>画像選択</button>
+        <React.Fragment>
+          <fieldset>
+            <label htmlFor="backgroundColor">背景色</label>
+            <input
+              value={backgroundColor}
+              name="backgroundColor"
+              type="color"
+              onChange={(event) => {
+                setBackgroundColor(event.currentTarget.value);
+              }}
+            />
+          </fieldset>
+          <fieldset>
+            <label htmlFor="color">カウンター文字色</label>
+            <input
+              name="color"
+              type="color"
+              onChange={(event) => {
+                setColor(event.currentTarget.value);
+              }}
+            />
+          </fieldset>
+          <fieldset>
+            <label htmlFor="counterBackgroundColor">カウンター背景色</label>
+            <input
+              value={counterBackgroundColor}
+              name="counterBackgroundColor"
+              type="color"
+              onChange={(event) => {
+                setCounterBackgroundColor(event.currentTarget.value);
+              }}
+            />
+          </fieldset>
+          <button onClick={handleClick}>画像選択</button>
+        </React.Fragment>
       ) : (
         <React.Fragment>
-          <p
-            css={css`
-              font-size: 4vw;
-            `}
-          >
-            {index + 1}個目
-          </p>
           <div
             css={css`
               overflow-x: hidden;

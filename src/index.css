@@ -17,4 +17,12 @@ code {
     monospace;
 }
 
+fieldset{
+  border: none;
+}
+
+fieldset label{
+  font-size: 18px;
+  padding-right: 1ch;
+}
 
