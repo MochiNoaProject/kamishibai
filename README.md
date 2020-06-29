@@ -1,1 +1,1 @@
-https://github.com/pikapkg/create-snowpack-app/tree/master/templates/app-template-react-typescript
+# Kamishibai

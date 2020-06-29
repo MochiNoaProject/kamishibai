@@ -1,4 +1,7 @@
 {
+  "name": "kamishibai",
+  "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
